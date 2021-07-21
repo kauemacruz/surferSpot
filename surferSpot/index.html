@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SurferSpot</title>
+        <script type="text/javascript" src="js/js.js" defer></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/css.css"/>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="images/icon.png">
+    </head>
+    <body>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <div id="articleLogin" class="article">
+            <div class="container loginHead">
+                <div class="row">
+                    <div class="col-sm  mx-auto logo">
+                        <img src="logo.svg" alt="logo" class="img-fluid">
+                    </div> 
+                </div>   
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="logoP green">Surfer'Spot</p>
+                    </div> 
+                </div>   
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="logoP blue">the perfect beach today</p>
+                    </div> 
+                </div>    
+            </div>
+            <form class="container" id="loginForm">
+                <div id="log_err"></div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="log_email" id="log_email" value="kaue@macruz">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="log_pass" id="log_pass" value="kaue123">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <button class="btn btn-primary submit logoP col-sm mx-auto" type="submit" id="MainPage">Login</button>
+                    </div>
+                    <div class="col-xs mx-auto">
+                        <label class="btn btn-primary submit logoP col-sm mx-auto menu_item" id="Register">Register</label>
+                    </div>             
+                </div>    
+            </form>
+        </div>
+        <div id="articleRegister" class="article">
+            <div class="container loginHead">
+                <div class="row">
+                    <div class="col-sm  mx-auto logo">
+                        <img src="logo.svg" alt="logo" class="img-fluid">
+                    </div> 
+                </div>   
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="logoP green">Surfer'Spot</p>
+                    </div> 
+                </div>   
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="logoP blue">the perfect beach today</p>
+                    </div> 
+                </div>    
+            </div>
+            <form class="container" id="myForm">
+                <div id="email_err"></div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="inp_email" id="inp_email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Name</label>
+                        <input type="name" class="form-control" name="inp_name" id="inp_name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Surname</label>
+                        <input type="name" class="form-control" name="inp_surname" id="inp_surname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="inp_password" id="inp_password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" name="inp_conPass" id="inp_conPass">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group notification col-xs">
+                        <p>Receive notifications in my email</p>
+                    </div>
+                    <div class="form-group notification col-xs">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary submit logoP col-sm mx-auto" type="submit" id="Login">Register</button>
+                </div> 
+                <p class="blue3 logoP mx-auto menu_item" id="MainPage5">Back to login page</p>       
+            </form>
+        </div>
+        <div id="articleHeader" class="article">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4 logo2">
+                        <img src="logo.svg" alt="logo" class="img-fluid">
+                        <p class="logoP green4">Surfer'Spot</p>
+                    </div> 
+                     <div class="col-sm-8 col-xs-8 logo2 header">
+                        <p class="logoP blue2 col-sm text-right" id="Logout">Logout</p>
+                        <p class="logoP green2 col-sm" id="welcome"></p>
+                    </div> 
+                </div>     
+            </div>
+        </div>
+        <div id="articleMainPage" class="article">
+            <div class="container" id="articleGoldCoast2">
+                <div class="row" id="chooseRegion">
+                    <div class="col-sm">
+                        <label class="green2 logoP">Choose Region</label>
+                        <div class="d-flex">
+                            <select onchange="checkConditions()" id="dropdownMenuOffset9" class="mx-auto adminBtn">
+                                <option selected>Choose here</option>
+                                <option>Gold Coast</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="articleCurrentCond">
+                <form id="currentCondForm">
+                    <div id="cond_err"></div>
+                    <input id="chosenRegion" name="chosenRegion" hidden>
+                    <div class="row">
+                        <div class="col-xs-4 mx-auto">
+                            <p class="blue3 logoP">Swell</p>
+                            <div class="d-flex">
+                                <input id="currentSize2" class="currentInp" readonly>
+                                <input type="number" step="0.01" id="currentSize" name="currentSize" hidden>
+                            </div>
+                            <div class="d-flex">
+                                <input id="currentDir2" class="currentInp"  readonly>
+                                <input id="currentDir"  name="currentDir" hidden>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 mx-auto">
+                            <p class="blue3 logoP">Wind</p>
+                            <div class="spinner-border" id="spinner"></div>
+                            <div class="d-flex">
+                                <input id="currentWindDir2" class="currentInp" readonly>
+                                <input id="currentWindDir"  name="currentWindDir" hidden>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 mx-auto">
+                            <p class="blue3 logoP">Tide</p>
+                            <div class="d-flex">
+                                <input id="currentHeight2" class="currentInp" readonly>
+                                <input type="number" step="0.01" id="currentHeight" name="currentHeight" hidden>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="bestBeaches">
+                        <div class="col-sm">
+                            <label class="green2 logoP">Choose your level</label>
+                            <div class="d-flex">
+                                <div class="dropdown mr-1 mx-auto">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle mx-auto" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                                    Surfing Level
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                        <!--<a class="dropdown-item menu_item" id="Begginer">Begginer</a>-->
+                                        <button class="dropdown-item" id="Intermediate" type="submit">Average</button>
+                                        <!--<a class="dropdown-item menu_item" id="Advanced">Advanced</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <!--<div class="row" id="articleBegginer">
+                    <div class="col-sm">
+                        <a href=""  class="blue3 logoP"><p>Best beaches for these conditions (Begginer)</p></a>
+                        <div class="container">
+                            <div class="row bestBeaches">
+                                <div class="col-xs-4 conditionsBox mx-auto">
+                                    <p class="green3 logoP">1 - Burleigh</p>
+                                    <p class="green3 logoP">2 - Burleigh</p>
+                                    <p class="green3 logoP">3 - Burleigh</p>
+                                    <p class="green3 logoP">4 - Burleigh</p>
+                                    <p class="green3 logoP">5 - Burleigh</p>
+                                </div>
+                                <div class="col-xs-4 conditionsBox mx-auto">
+                                    <p class="green3 logoP">6 - Burleigh</p>
+                                    <p class="green3 logoP">7 - Burleigh</p>
+                                    <p class="green3 logoP">8 - Burleigh</p>
+                                    <p class="green3 logoP">9 - Burleigh</p>
+                                    <p class="green3 logoP">10 - Burleigh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="row" id="articleIntermediate">
+                    <div class="col-sm">
+                        <p class="blue3 logoP">Spots with the best potential</p>
+                         <div class="container">
+                            <div class="row bestBeaches">
+                                <div class="col-xs-4 conditionsBox mx-auto" id="best">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row" id="articleAdvanced">
+                    <div class="col-sm">
+                        <a href="" class="blue3 logoP"><p>Best beaches for these conditions (Advanced)</p></a>
+                         <div class="container">
+                            <div class="row bestBeaches">
+                                <div class="col-xs-4 conditionsBox mx-auto">
+                                    <p class="green3 logoP">1 - Burleigh</p>
+                                    <p class="green3 logoP">2 - Burleigh</p>
+                                    <p class="green3 logoP">3 - Burleigh</p>
+                                    <p class="green3 logoP">4 - Burleigh</p>
+                                    <p class="green3 logoP">5 - Burleigh</p>
+                                </div>
+                                <div class="col-xs-4 conditionsBox mx-auto">
+                                    <p class="green3 logoP">6 - Burleigh</p>
+                                    <p class="green3 logoP">7 - Burleigh</p>
+                                    <p class="green3 logoP">8 - Burleigh</p>
+                                    <p class="green3 logoP">9 - Burleigh</p>
+                                    <p class="green3 logoP">10 - Burleigh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <button class="btn btn-primary submit2 logoP col-sm mx-auto menu_item" id="AdminPage">Admin Panel</button>
+            <button class="btn btn-primary submit2 logoP col-sm mx-auto" id="commentsPage">Your feed back is important for us</button>
+            <button class="btn btn-primary submit2 logoP col-sm mx-auto" id="UpdateProfile">Update your profile</button>
+        </div>
+        <div id="articleComments" class="article">    
+            <form class="container" id="commentForm">
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <p class="textCom text-center">Please, leave your feedback so we can provide a better survice</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <textarea class="comments" name="sendComment" id="sendComment"></textarea>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <button type="submit" class="btn btn-primary submit logoP col-sm mx-auto">Send</button>
+                    </div>
+                </div>  
+            </form> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <p class="textCom">Your previous comments</p>
+                    </div>
+                </div> 
+                <div class="row" id="previousComments">
+                </div>  
+                <p class="blue3 logoP mx-auto menu_item" id="MainPage2">Back to main page</p>     
+            </div>
+        </div>
+        <div id="articleUpdateProfile" class="article">
+            <form class="container" id="updateProfileForm">
+                <div id="update_err"></div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="upd_email" id="upd_email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Name</label>
+                        <input type="name" class="form-control"  name="upd_name" id="upd_name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Surname</label>
+                        <input type="name" class="form-control" name="upd_surname" id="upd_surname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Mobile (optional)</label>
+                        <input type="number" class="form-control" name="upd_mobile" id="upd_mobile">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="upd_pass" id="upd_pass">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" name="upd_conPass" id="upd_conPass">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group notification col-xs">
+                        <p>Change to day/night mode</p>
+                    </div>
+                    <div class="form-group notification col-xs">
+                        <input id="changecheck" type="checkbox" onchange="doChangeBkgrnd()">
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary submit logoP col-sm mx-auto" id="update">Update</button>
+                </div>    
+            </form>
+            <p class="blue3 logoP mx-auto menu_item" id="MainPage4">Back to main page</p>
+        </div>
+        <div id="articleAdminPage" class="article">
+            <div class="container" id="chooseOption">
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="green2 logoP">What would you like to do?</label>
+                        <div class="d-flex">
+                            <div class="dropdown mr-1 mx-auto">
+                                <button type="button" class="btn btn-secondary dropdown-toggle mx-auto adminBtn" id="dropdownMenuOffset7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                                choose an option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset7">
+                                    <a class="dropdown-item menu_item" id="AdminComments">Manage comments</a>
+                                    <a class="dropdown-item menu_item" id="ManageSpots">Manage spots</a>
+                                    <a class="dropdown-item menu_item" id="AdminRegister">Register a new user</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="container" id="articleAdminComments">
+                <div class="row">
+                    <div id="search_err"></div>
+                   <div class="form-group label col-sm">
+                        <label>Search users'ID</label>
+                        <input type="number" class="form-control" name="search_user" id="search_user">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs mx-auto">
+                        <button type="submit" class="btn btn-primary submit logoP col-sm mx-auto">Search</button>
+                    </div>  
+                    <div class="col-xs mx-auto">
+                        <div class="btn btn-primary submit logoP col-sm mx-auto" id="viewAll" onclick="viewAll()">View all</div>
+                    </div>                
+                </div>     
+            </form>
+            <div class="container" id="articleAdminCommentsResults"></div>
+            <form class="container" id="articleAdminRegister">
+                <div id="reg_err"></div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Register new user</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" name="registerEmail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Name</label>
+                        <input type="name" class="form-control" id="registerName" name="registerName">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Surname</label>
+                        <input type="name" class="form-control" id="registerSurname" name="registerSurname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="registerPass" name="registerPass">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-sm">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConPass" name="registerConPass">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group label col-xs" id="select">
+                        <label>Choose a role</label>
+                        <select class="form-control mx-auto" name="registerRole">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary submit logoP col-sm mx-auto">Register</button>
+                </div>    
+            </form>
+            <div class="container" id="articleAddSpots">
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="green2 logoP">Choose Region to Add New Spot</label>
+                        <div class="d-flex">
+                            <div class="dropdown mr-1 mx-auto">
+                                <button type="button" class="btn btn-secondary dropdown-toggle mx-auto adminBtn" id="dropdownMenuOffset8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                                choose an option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset8">
+                                    <a class="dropdown-item menu_item" id="GoldCoast3">Gold Coast</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="container" id="articleGoldCoast3">
+                    <div id="spot_err"></div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>Spot</label>
+                            <input type="name" class="form-control" name="spotName" id="spotName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>Region</label>
+                            <select class="form-control" name="region" id="region">
+                                <option value="goldCoast">Gold Coast</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>perfect wind direction </label>
+                            <select class="form-control" name="windDir" id="windDir">
+                                <option value="180">S</option>
+                                <option value="157.5">SSE</option>
+                                <option value="135">SE</option>
+                                <option value="112.5">ESE</option>
+                                <option value="90">E</option>
+                                <option value="67.5">ENE</option>
+                                <option value="45">NE</option>
+                                <option value="22.5">NNE</option>
+                                <option value="0.1">N</option>
+                                <option value="337.5">NNW</option>
+                                <option value="315">NW</option>
+                                <option value="292.5">WNW</option>
+                                <option value="270">W</option>
+                                <option value="247.5">WSW</option>
+                                <option value="225">SW</option>
+                                <option value="202.5">SSW</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>perfect direction of swell</label>
+                            <select class="form-control" name="swellDir" id="swellDir">
+                                <option value="180">S</option>
+                                <option value="157.5">SSE</option>
+                                <option value="135">SE</option>
+                                <option value="112.5">ESE</option>
+                                <option value="90">E</option>
+                                <option value="67.5">ENE</option>
+                                <option value="45">NE</option>
+                                <option value="22.5">NNE</option>
+                                <option value="0.1">N</option>
+                                <option value="337.5">NNW</option>
+                                <option value="315">NW</option>
+                                <option value="292.5">WNW</option>
+                                <option value="270">W</option>
+                                <option value="247.5">WSW</option>
+                                <option value="225">SW</option>
+                                <option value="202.5">SSW</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>min swell to breaking (ft)</label>
+                            <input type="number" class="form-control" name="minSwell" id="minSwell">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group label col-sm">
+                            <label>tide height (m)</label>
+                            <input type="number"  step="0.01" class="form-control" name="tide" id="tide">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs mx-auto">
+                            <button type="submit" class="btn btn-primary submit logoP col-sm mx-auto">Add New</button>
+                        </div>             
+                    </div>  
+                </form>     
+            </div>
+            <div class="container" id="articleManageSpots">
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="green2 logoP">View all Spots: Choose Region</label>
+                        <div class="d-flex">
+                            <div class="dropdown mr-1 mx-auto">
+                                <button type="button" class="btn btn-secondary dropdown-toggle mx-auto adminBtn" id="dropdownMenuOffset10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                                choose an option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset10">
+                                    <button type="button" class="dropdown-item" id="goldCoast" onclick='populateSpots(this.id)'>Gold Coast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="spot_err2"></div>
+                <div id="articleGoldCoast"></div>     
+            </div>
+            <p class="blue3 logoP mx-auto menu_item" id="MainPage3">Back to main page</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+    <script id="commentsTemp" type="text/template">
+        <div class="container">
+            <div class="row d-flex bd-highlight mb-3">
+                <p class="col-xs mx-auto commentsBox">{{comment}}</p>
+            </div>
+            <div class="row d-flex bd-highlight mb-3">
+                <p class="textCom">Reply:</p>
+                <p class="col-xs commentsAns ml-auto p-2">{{replies}}</p>
+            </div>  
+        </div>
+    </script>
+    <script id="commentsTemp2" type="text/template">
+        <div class="container">
+            <div class="row d-flex bd-highlight mb-3">
+                <p class="col-xs mx-auto commentsBox">{{comment}}</p>
+            </div>
+            <div class="row">
+                <div class="row d-flex bd-highlight mb-3">
+                    <div class="row d-flex bd-highlight mb-3">
+                        <p class="textCom2 col-xs">Reply:</p>
+                        <input type="text" class="col-xs commentsAns2 ml-auto p-2" id="rep{{commentID}}" value="{{replies}}">
+                    </div>
+                    <div class="col-xs mx-auto">
+                        <input type="text" value="{{commentID}}" id="com{{commentID}}" hidden>
+                        <button type="button" class="btn btn-primary submit logoP col-sm mx-auto" onclick='replyCom(document.getElementById("com{{commentID}}").value, document.getElementById("rep{{commentID}}").value)'>Reply</button>
+                    </div> 
+                    <div class="col-xs mx-auto deleteComments">
+                        <button class="btn btn-primary submit logoP col-sm mx-auto" onclick='deleteCom(document.getElementById("com{{commentID}}").value)' type="button">Delete</button>
+                    </div> 
+                </div>              
+            </div>          
+        </div>
+    </script>
+    <script id="commentsTemp3" type="text/template">
+        <form class="container">
+            <div class="row">
+                <div class="form-group label col-sm">
+                    <label class="updSpot">Spot</label>
+                    <input type="text" value="{{spotID}}" id="{{spotID}}" hidden>
+                    <input type="name" class="form-control" value="{{spotName}}" id="{{spotName}}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 mx-auto">
+                    <p class="blue3 logoP">Swell (°/m)</p>
+                    <div class="d-flex">
+                        <input type="name" class="currentInp" value="{{swellDir}}" id="swellD{{swellDir}}{{spotID}}">
+                    </div>
+                    <div class="d-flex">
+                        <input type="number" class="currentInp" value="{{swellSize}}" id="swellS{{swellSize}}{{spotID}}">
+                    </div>
+                </div>
+                <div class="col-xs-4 mx-auto">
+                    <p class="blue3 logoP">Wind (°)</p>
+                    <div class="d-flex">
+                        <input type="name" class="currentInp" value="{{wind}}" id="wind{{wind}}{{spotID}}">
+                    </div>
+                </div>
+                <div class="col-xs-4 mx-auto">
+                    <p class="blue3 logoP">Tide (m)</p>
+                    <div class="d-flex">
+                        <input type="number" class="currentInp" value="{{tide}}" id="tide{{tide}}{{spotID}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group notification col-xs">
+                    <p>Created by: {{createdBy}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group notification col-xs">
+                    <p>at: {{date}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs mx-auto">
+                    <button type="button" class="btn btn-primary submit logoP col-sm mx-auto" onclick='updateSpot(document.getElementById("{{spotID}}").value, 
+                    document.getElementById("{{spotName}}").value, document.getElementById("wind{{wind}}{{spotID}}").value, 
+                    document.getElementById("swellD{{swellDir}}{{spotID}}").value, document.getElementById("swellS{{swellSize}}{{spotID}}").value, 
+                    document.getElementById("tide{{tide}}{{spotID}}").value)'>Update</button>
+                </div> 
+                <div class="col-xs mx-auto deleteComments">
+                    <button class="btn btn-primary submit logoP col-sm mx-auto" type="button" onclick='deleteSpot(document.getElementById("{{spotID}}").value)'>Delete</button>
+                </div>                 
+            </div> 
+        </form> 
+    </script>
+    <script id="commentsTemp4" type="text/template">
+        <p class="green3 logoP" id="best">{{bestSpots}}</p>
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+            console.log('Service worker registration succeeded:', registration);
+        }, /*catch*/ function(error) {
+            console.log('Service worker registration failed:', error);
+        });
+        } else {
+        console.log('Service workers are not supported.');
+        }
+    </script>
+</html>

@@ -1,0 +1,225 @@
+@import url(http://fonts.googleapis.com/css?family=Norican);
+body{
+    background: black;
+}
+.logoP{
+    text-align: center;
+    font-family: 'Norican', cursive;
+}
+.green{
+    color:#00FF00;
+    font-size: 33px;
+    height: 33px;
+}
+.blue{
+    color: #41D1E2;
+    font-size: 24px;
+    height: 24px;
+}
+.logo{
+    width: 40%;
+    margin-top: 15px;
+}
+.label{
+    font-size: 24px;
+   color: #41D1E2;
+    font-family: 'Bookman';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.submit{
+    height: 36px;
+    font-size: 18px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    width: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.logo2{
+    width: 25%;
+    margin-left: 20px;
+}
+.green2{
+    color:#00FF00;
+    font-size: 20px;
+    width: 100%;
+}
+.green4{
+    color:#00FF00;
+    font-size: 16px;
+    width: 100%;
+}
+.blue2{
+    color: #41D1E2;
+    font-size: 20px;
+    width: 100%;
+}
+.header{
+    width: 60%;
+}
+.conditions{
+    width: 85%;
+    border: 1px solid white;
+}
+.blue3{
+    color: #41D1E2;
+    font-size: 20px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+.green3{
+    color:#00FF00;
+    font-size: 16px;  
+    height: 10px;
+}
+#dropdownMenuOffset, #dropdownMenuOffset7, #dropdownMenuOffset8, #dropdownMenuOffset9, #dropdownMenuOffset10{
+    background-color: black;
+    color: white;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.currentInp{
+    background-color: black;
+    color: white;
+    width: 80px;
+    margin-top: 10px;
+    border: none;
+    margin-right: -5px;
+    font-size: 18px;
+    text-align: center;
+}
+.bestBeaches{
+    width: 100%;
+    border: 1px solid white;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.notification{
+    font-size: 19px;
+    color: #00FF00;
+    font-family: 'Norican', cursive;
+    margin-left: 40px;
+    margin-bottom: -10px;
+}
+.comments{
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+}
+.textCom{
+    font-size: 20px;
+    color: #00FF00;
+    font-family: 'Norican', cursive;
+    padding: 20px;
+}
+.textCom2{
+    font-size: 20px;
+    color: #00FF00;
+    font-family: 'Norican', cursive;
+    padding: 20px;
+    margin-left: 15px;
+}
+.commentsBox{
+    width: 80%;
+    border: 1px solid white;
+    color: #41D1E2;
+    font-size: 24px;
+    font-family: 'Norican', cursive;
+    padding: 10px;
+}
+.commentsAns{
+    width: 60%;
+    color: #41D1E2;
+    font-size: 24px;
+    font-family: 'Norican', cursive;
+    margin-right:10px;
+}
+.commentsAns2{
+    width: 60%;
+    color: #41D1E2;
+    font-size: 24px;
+    font-family: 'Norican', cursive;
+    margin-right:10px;
+    background-color: black;
+    border:  1px solid white; 
+} 
+.scrollable-menu{
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+.adminBtn{
+    margin-bottom: 60px;
+}
+#articleRegister, #articleMainPage, #articleComments, #articleUpdateProfile, #articleAdminPage{
+    display:none;
+}
+#articleHeader{
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#Comments, #AdminPage{
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+#articleBegginer, #articleIntermediate, #articleAdvanced, #articleCurrentCond{
+    display:none;
+    margin-bottom: 30px;
+}
+.loginHead{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#select{
+    width: 80%;
+    margin-left: 40px;
+}
+#email_err, #log_err, #update_err, #search_err, #reg_err, #spot_err, #spot_err2, #cond_err{
+    font-size: 20px;
+    color: red;
+    font-family: 'Norican', cursive;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    display: none;
+}
+.submit2{
+    height: 36px;
+    font-size: 18px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+#myProgress {
+    width: 100%;
+    background-color:none;
+    position: fixed;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #4CAF50;
+    display:none;
+}
+#bestBeaches{
+    display: none;
+}
+#spinner{
+    display: none;
+    margin: 20px;
+}
+.updSpot{
+    border-top: 3px solid white;
+    width: 90%;
+    margin-top: 15px; 
+}
